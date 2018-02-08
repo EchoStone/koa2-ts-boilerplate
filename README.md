@@ -1,4 +1,4 @@
-# koa2-ts-boilerplate
+# KOA2-TS-BOILERPLATE
 
 这是一个基于 koa2 和 typescript 的一个实践。
 
@@ -10,9 +10,9 @@
 ## 2018 目标：
 
 - 构建一个可用的 ts 的最佳配置集。
-- 结合 koa2, koa-router
-- 使用 ORM
-- 使用 IoC
+- 结合 koa2
+- 使用 ORM - typeorm
+- 使用 IoC - typedi
 - env 实践
 
 
@@ -22,9 +22,11 @@
 - https://github.com/koajs/koa
 - https://github.com/typestack/routing-controllers
 
+
 ### IoC
 
 - https://github.com/typestack/typedi
+
 
 ### ORM
 
@@ -33,3 +35,45 @@
 
 
 
+## 开始使用
+
+### 准备数据库
+
+数据文件在 `db` 目录下
+
+
+### 更改 db 连接配置
+
+在项目的根目录，创建 `ormconfig.json` 来配置 typeorm 的数据库连接配置。
+
+可参考 `ormconfig.example.json`
+
+
+### VSCode 
+
+在开发中，可以方便的使用 vscode 来进行开发和调试，其配置如下
+
+```
+$ yarn dev
+```
+
+然后配置 vscode 的 debug。
+
+配置文件在 docs/launch.json
+
+
+### 直接启动
+
+分两部，首先进行编译，然后再进行启动。
+
+```
+yarn build
+
+yarn start
+```
+
+
+## Authors
+
+- redelva https://github.com/redelva
+- lanvige https://github.com/lanvige

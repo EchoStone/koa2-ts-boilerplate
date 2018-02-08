@@ -9,11 +9,18 @@ export class User {
   @Column()
   username: string;
 
+  // 手机号是必要的吗？
+  @Column({ default: '' })
+  phone: string;
+
   @Column()
   password: string;
 
-  // @Column({ name: 'enable_access', default: false })
-  // enableAccess: boolean;
+  @Column()
+  salt: string;
+
+  @Column({ name: 'state', default: 1 })
+  state: number;
 
   @Column({ name: 'is_admin' })
   isAdmin: number;
