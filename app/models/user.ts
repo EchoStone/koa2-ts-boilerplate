@@ -1,16 +1,13 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { StringUtils } from '../../utils/stringUtils';
 
-@Entity({ name: 'users' })
+@Entity({ name: 'zx_user' })
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  name: string;
-
-  @Column()
-  email: string;
+  username: string;
 
   @Column()
   password: string;
@@ -18,15 +15,15 @@ export class User {
   // @Column({ name: 'enable_access', default: false })
   // enableAccess: boolean;
 
-  @Column()
-  token: string;
+  @Column({ name: 'is_admin' })
+  isAdmin: number;
 
-  @CreateDateColumn({ name: 'created_at' })
-  createdAt: Date;
+  // @CreateDateColumn({ name: 'created_at' })
+  // createdAt: Date;
 
-  @UpdateDateColumn({ name: 'updated_at' })
-  updatedAt: Date;
+  // @UpdateDateColumn({ name: 'updated_at' })
+  // updatedAt: Date;
 
-  @Column({ name: 'deleted_at' })
-  deletedAt: Date;
+  // @Column({ name: 'deleted_at' })
+  // deletedAt: Date;
 }

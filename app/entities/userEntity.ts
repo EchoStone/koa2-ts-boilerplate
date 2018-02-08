@@ -3,16 +3,17 @@ import { User } from '../models/user';
 
 export class UserEntity extends BaseEntity {
   private id: number;
-  private name: string;
-  private token: string;
-  private created_at: Date;
+  private username: string;
+  private password: string;
+  private isAdmin: number;
+
 
   public constructor(user: User) {
     super();
 
     this.id = user.id;
-    this.name = user.name;
-    this.token = user.token;
-    this.created_at = user.createdAt
+    this.username = user.username;
+    this.password = user.password;
+    this.isAdmin = user.isAdmin
   }
 }
